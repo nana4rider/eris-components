@@ -1,4 +1,4 @@
-import Eris from 'eris';
+import * as Eris from 'eris';
 import * as Util from './util';
 import * as Constants from './constants';
 import ActionRow from './classes/ActionRow';
@@ -8,10 +8,21 @@ import MenuOption from './classes/MenuOption';
 /**
  * The Eris client.
  * @param  {Eris.Client} ErisClient
- * @param  {string} botToken
+ * @param  {object} options
  * @returns Eris
  */
-declare function Client(ErisClient: Eris.Client, botToken: string): Eris.Client;
+declare function Client(
+    ErisClient: Eris.Client,
+    options?: {
+        debug?: boolean;
+        invalidClientInstanceError?: boolean;
+        ignoreRequestErrors?: boolean;
+    } = {
+        debug: false,
+        invalidClientInstanceError: true,
+        ignoreRequestErrors: false,
+    }
+): Eris.Client;
 declare const _default: {
     Client: typeof Client;
     ActionRow: typeof ActionRow;
