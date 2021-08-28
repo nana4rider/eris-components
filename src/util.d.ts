@@ -1,4 +1,4 @@
-import { ButtonStyles, ComponentTypes, objButton, objMenu, objMenuOption } from '../lib/constants';
+import { ButtonStyles, ComponentTypes, objButton, objMenu, objMenuOption } from './constants';
 export declare class ErisComponentsError extends Error {
     /**
      * Throw an error.
