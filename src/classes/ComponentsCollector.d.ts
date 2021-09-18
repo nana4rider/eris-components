@@ -1,4 +1,4 @@
-import * as EventEmitter from 'events';
+import EventEmitter from 'events';
 // TODO: Tipar esto mejor.
 export default class ErisComponentsCollector extends EventEmitter {
     ErisClient: any;
